@@ -1,0 +1,16 @@
+li {
+    margin-bottom: 8px;
+  }
+  
+  button {
+    margin-left: 10px;
+  }
+  
+  form {
+    margin: 20px 0;
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 8px;
+    background-color: #fafafa;
+  }
+  
