@@ -1,0 +1,25 @@
+<form *ngIf="editing">
+  <input type="text" [(ngModel)]="editing.name" name="name" required />
+  <input type="color" [(ngModel)]="editing.color" name="color" />
+  <button type="submit" (click)="saveTag()">Save</button>
+  <button type="button" (click)="cancelEditing()">Cancel</button>
+</form>
+
+<button (click)="editing = { id: 0, name: '', color: '#000000' }">Add Tag</button>
+
+<ul>
+  @for(tag of tags; track $index) {
+    <li>
+      <app-tag [id]="tag.id" [name]="tag.name" [color]="tag.color"></app-tag>
+    </li>
+  } @empty {
+    <li>Aucun tag !</li>
+  }
+</ul>
+
+
+<div *ngFor="let tag of tags">
+  <app-tag [id]="tag.id" [name]="tag.name" [color]="tag.color" (click)="edit(tag)"></app-tag>
+  <button (click)="deleteTag(tag)">Delete</button>
+</div>
+<a href="#" (click)="dialogAddTag()">Ajouter une nouvelle étiquette</a>
