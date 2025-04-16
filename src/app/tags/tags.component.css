@@ -1,16 +1,109 @@
-li {
-    margin-bottom: 8px;
-  }
-  
-  button {
-    margin-left: 10px;
-  }
-  
-  form {
-    margin: 20px 0;
-    border: 1px solid #ccc;
-    padding: 10px;
-    border-radius: 8px;
-    background-color: #fafafa;
-  }
-  
+.tag-container {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 30px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.tag-container h2 {
+  margin-bottom: 20px;
+  text-align: center;
+  font-size: 24px;
+  color: #333;
+  border-bottom: 2px solid #eee;
+  padding-bottom: 10px;
+}
+
+form {
+  margin: 20px 0;
+  padding: 15px;
+  border-radius: 12px;
+  background: #fefefe;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.04);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+}
+
+form input[type="text"] {
+  padding: 10px;
+  font-size: 15px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  width: 200px;
+}
+
+form input[type="color"] {
+  height: 40px;
+  width: 40px;
+  border: none;
+  background: transparent;
+}
+
+form button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 9px 16px;
+  border-radius: 6px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+form button:hover {
+  background-color: #0056b3;
+}
+
+button {
+  background-color: #28a745;
+  color: white;
+  border: none;
+  padding: 9px 16px;
+  border-radius: 6px;
+  font-size: 14px;
+  margin-top: 15px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #218838;
+}
+
+ul.tag-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 20px 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+ul.tag-list li {
+  margin: 0;
+}
+
+.tag-actions {
+  margin-top: 15px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px;
+  background-color: #fafafa;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+}
+
+.tag-actions button {
+  background-color: #dc3545;
+}
+
+.tag-actions button:hover {
+  background-color: #c82333;
+}

@@ -21,23 +21,6 @@ export class TagsComponent {
   constructor(private storage: StorageService) {
     this.loadTags();
   }
-// la methode load tags() qui chargera si pas deja charges
-dialogAddTag(): false {
-  const name = window.prompt("Nom de la nouvelle étiquette :");
-
-  if (name && name.trim() !== '') {
-    const newTag: Tag = {
-      id: Date.now(),
-      name: name.trim(),
-      color: '#000000' // ou une couleur par défaut
-    };
-
-    this.tags.push(newTag);
-    this.storage.save(this.tags);
-  }
-
-  return false; // ← pour empêcher le comportement par défaut du lien
-}
 
   loadTags() {
     if (this.loaded) return;
@@ -71,5 +54,19 @@ dialogAddTag(): false {
   deleteTag(tag: Tag) {
     this.tags = this.tags.filter(t => t.id !== tag.id);
     this.storage.save(this.tags);
+  }
+
+  dialogAddTag(): false {
+    const name = window.prompt("Nom de la nouvelle étiquette :");
+    if (name && name.trim() !== '') {
+      const newTag: Tag = {
+        id: Date.now(),
+        name: name.trim(),
+        color: '#000000'
+      };
+      this.tags.push(newTag);
+      this.storage.save(this.tags);
+    }
+    return false;
   }
 }
